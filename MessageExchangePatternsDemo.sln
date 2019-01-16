@@ -3,7 +3,31 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.136
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MathServiceLibrary", "MathServiceLibrary\MathServiceLibrary.csproj", "{0F27DE93-FBF9-4D7A-AA65-7780E338F8B8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebHostDemo", "WebHostDemo\WebHostDemo.csproj", "{ADD381F6-8764-4FE6-A623-4AE3E37380F9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinFormsClient", "WinFormsClient\WinFormsClient.csproj", "{03A14000-2EEA-40BB-8985-A62FCB013F7D}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0F27DE93-FBF9-4D7A-AA65-7780E338F8B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0F27DE93-FBF9-4D7A-AA65-7780E338F8B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0F27DE93-FBF9-4D7A-AA65-7780E338F8B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0F27DE93-FBF9-4D7A-AA65-7780E338F8B8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ADD381F6-8764-4FE6-A623-4AE3E37380F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ADD381F6-8764-4FE6-A623-4AE3E37380F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ADD381F6-8764-4FE6-A623-4AE3E37380F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ADD381F6-8764-4FE6-A623-4AE3E37380F9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{03A14000-2EEA-40BB-8985-A62FCB013F7D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{03A14000-2EEA-40BB-8985-A62FCB013F7D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{03A14000-2EEA-40BB-8985-A62FCB013F7D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{03A14000-2EEA-40BB-8985-A62FCB013F7D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
