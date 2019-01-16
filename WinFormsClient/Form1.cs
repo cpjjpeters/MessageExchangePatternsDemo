@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Principal;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -33,6 +34,16 @@ namespace WinFormsClient
             obj.Number1 = Convert.ToInt32(textBox1.Text);
             obj.Number2 = Convert.ToInt32(textBox2.Text);
             textBox3.Text = proxy.Subtract(obj).ToString();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            proxy.SignIn(WindowsIdentity.GetCurrent().Name);
+        }
+
+        private void Form1_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            proxy.SignOut(WindowsIdentity.GetCurrent().Name);
         }
     }
 }

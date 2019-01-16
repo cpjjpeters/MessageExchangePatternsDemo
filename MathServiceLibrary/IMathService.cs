@@ -18,6 +18,10 @@ namespace MathServiceLibrary
         int Subtract(MyNumbers obj);
 
         // TODO: Add your service operations here
+        [OperationContract(IsOneWay = true)]
+        void SignIn(string UserName);
+        [OperationContract(IsOneWay = true)]
+        void SignOut(string UserName);
     }
 
     // Use a data contract as illustrated in the sample below to add composite types to service operations.
