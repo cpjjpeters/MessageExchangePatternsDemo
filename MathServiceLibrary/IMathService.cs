@@ -20,6 +20,7 @@ namespace MathServiceLibrary
         // TODO: Add your service operations here
         [OperationContract(IsOneWay = true)]
         void SignIn(string UserName);
+
         [OperationContract(IsOneWay = true)]
         void SignOut(string UserName);
     }

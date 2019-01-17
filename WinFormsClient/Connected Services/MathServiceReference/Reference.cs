@@ -89,6 +89,18 @@ namespace WinFormsClient.MathServiceReference {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMathService/Subtract", ReplyAction="http://tempuri.org/IMathService/SubtractResponse")]
         System.Threading.Tasks.Task<int> SubtractAsync(WinFormsClient.MathServiceReference.MyNumbers obj);
+        
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IMathService/SignIn")]
+        void SignIn(string UserName);
+        
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IMathService/SignIn")]
+        System.Threading.Tasks.Task SignInAsync(string UserName);
+        
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IMathService/SignOut")]
+        void SignOut(string UserName);
+        
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IMathService/SignOut")]
+        System.Threading.Tasks.Task SignOutAsync(string UserName);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -132,6 +144,22 @@ namespace WinFormsClient.MathServiceReference {
         
         public System.Threading.Tasks.Task<int> SubtractAsync(WinFormsClient.MathServiceReference.MyNumbers obj) {
             return base.Channel.SubtractAsync(obj);
+        }
+        
+        public void SignIn(string UserName) {
+            base.Channel.SignIn(UserName);
+        }
+        
+        public System.Threading.Tasks.Task SignInAsync(string UserName) {
+            return base.Channel.SignInAsync(UserName);
+        }
+        
+        public void SignOut(string UserName) {
+            base.Channel.SignOut(UserName);
+        }
+        
+        public System.Threading.Tasks.Task SignOutAsync(string UserName) {
+            return base.Channel.SignOutAsync(UserName);
         }
     }
 }
