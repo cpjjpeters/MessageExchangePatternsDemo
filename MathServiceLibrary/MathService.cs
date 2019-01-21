@@ -44,5 +44,18 @@ namespace MathServiceLibrary
                 UserName, DateTime.Now.ToString("hh:mm:ss"));
             File.AppendAllText(@"C:\Users\Carl\Documents\Test Client Projects\UserLog.txt", str.ToString());
         }
+
+        public void StartPrintingLogFiles(string message)
+        {
+            IMathServiceCallback MScallback = 
+                OperationContext.Current.GetCallbackChannel<
+                IMathServiceCallback>();
+
+            // printing code comes here
+            Console.WriteLine("we are printing");
+            //
+            System.Threading.Thread.Sleep(new TimeSpan(0, 0, 5));
+            MScallback.NotifyClientWhenPrintingIsDone(message);
+        }
     }
 }
